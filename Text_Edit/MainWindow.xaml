@@ -1,0 +1,50 @@
+﻿<Window x:Class="Text_Edit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Text_Edit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="430" Width="710" MaxHeight="430" MaxWidth="710" MinHeight="430"
+        MinWidth="710">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#4C5454">
+            <Border Height="35" Width="180" 
+                    Background="White"
+                    HorizontalAlignment="Left"
+                    Margin="10,0,0,0" IsEnabled="False">
+                <TextBox Name="fileLocationtxt" Text="File Location" HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         Margin="10" FontWeight="Bold" FontFamily="Agency FB" FontSize="13"
+                         BorderThickness="0"/>
+            </Border>
+
+            <Button Name="selectFileBtr" Height="35" Width="45" HorizontalAlignment="Left"
+                    Margin="190,10,0,10" FontWeight="Bold" BorderThickness="0">/\</Button>
+            <Button Name="saveFiltBtr" Height="35" Width="44" HorizontalAlignment="Left"
+                    Margin="247,10,0,10" FontWeight="Bold" BorderThickness="0">Save</Button>
+
+            <CheckBox Name="autoSaveCheckBox" Width="20" Height="20" Margin="312,28,368,7"></CheckBox>
+            <Label Content="Auto Save" FontFamily="Agency FB"
+                   HorizontalAlignment="Left" Margin="296,-1,0,34" FontWeight="Bold"
+                   Foreground="White"></Label>
+            <Button Name="cutBtr" Height="35" Width="44" HorizontalAlignment="Left"
+                    FontWeight="Bold" BorderThickness="0" Margin="375,15,0,9" Click="CutButton_Click">Cut</Button>
+            <Button Name="copyBtr" Height="35" Width="44" HorizontalAlignment="Left"
+                    FontWeight="Bold" BorderThickness="0" Margin="461,15,0,9" Click="CopyBtr_Click">Copy</Button>
+            <Button Name="pasteBtr" Height="35" Width="44" HorizontalAlignment="Left"
+                    FontWeight="Bold" BorderThickness="0" Margin="544,15,0,9" Click="PasteBtr_Click">Paste</Button>
+            <Button Name="selectAllBtr" Height="35" Width="70" HorizontalAlignment="Left"
+                    FontWeight="Bold" BorderThickness="0" Margin="616,15,0,9" Click="SelectAllBtr_Click">Select ALL</Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <TextBox Name="textBox" Text="Text" FontSize="24"></TextBox>
+        </Grid>
+
+    </Grid>
+</Window>
